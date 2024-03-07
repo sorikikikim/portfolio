@@ -3,18 +3,22 @@ title: "Two Forms of Pre-rendering"
 date: '2023-07-09'
 ---
 
-## introduce
-Next.js는 React 애플리케이션을 빌드하기 위한 인기 있는 프레임워크 중 하나입니다. Next.js는 **정적 파일 생성**과 **서버 사이드 렌더링(SSR)**을 통해 Pre-rendering을 지원하여 애플리케이션의 성능과 검색 엔진 최적화(SEO)를 향상시킵니다.
+### introduce
+Next.js는 React 애플리케이션을 빌드하기 위한 인기 있는 프레임워크 중 하나입니다. Next.js는 **정적 파일 생성** 과 **서버 사이드 렌더링(SSR)** 을 통해 Pre-rendering을 지원하여 애플리케이션의 성능과 검색 엔진 최적화(SEO)를 향상시킵니다.
 
-## What is Pre-rendering?
+
+### What is Pre-rendering?
 Pre-rendering은 **사용자가 요청을 보내기 전**에 페이지의 HTML을 **미리 생성**하는 기술입니다. 이를 통해 사용자가 페이지를 요청할 때마다 서버에서 동적으로 페이지를 생성하는 것보다 성능이 향상됩니다.
 
-### types
+
+#### types
 Next.js에서는 두 가지 종류의 Pre-rendering을 지원합니다.
 
-#### 1. 정적 생성(Static Generation)
+
+##### 1. 정적 생성(Static Generation)
 정적 생성은 **빌드 할 때 미리 HTML 파일을 생성하여 저장**하는 방식입니다. 이를 통해 동일한 HTML을 여러 사용자에게 제공할 수 있으며 CDN에 캐시될 수 있어 빠른 페이지 로딩이 가능합니다.
 
-#### 2. 서버 사이드 렌더링(Server-side Rendering, SSR)
+
+##### 2. 서버 사이드 렌더링(Server-side Rendering, SSR)
 서버 사이드 렌더링은 **각 요청마다 페이지를 서버 측에서 동적으로 생성**하는 방식입니다. 데이터베이스와 같은 외부 소스에서 데이터를 가져와서 페이지를 렌더링합니다. 이를 통해 항상 최신 데이터를 제공할 수 있습니다.
 

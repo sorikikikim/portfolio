@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import homeStyles from '@/styles/Home.module.css';
-import { GetStaticProps, NextPage } from 'next';
+import { GetStaticProps } from 'next';
 import { getSortedPostsData } from '@/lib/post';
+import Link from 'next/link';
 
 export default function Home({
     allPostsData,
@@ -13,7 +14,7 @@ export default function Home({
     }[];
 }) {
     return (
-        <div>
+        <div className={homeStyles.container}>
             <Head>
                 <title>Sori Kim</title>
             </Head>
@@ -28,7 +29,9 @@ export default function Home({
                 <ul className={homeStyles.list}>
                     {allPostsData.map(({ id, date, title }) => (
                         <li className={homeStyles.listItem} key={id}>
-                            <a>{title}</a>
+                            <Link href={`/posts/${id}`}>
+                                <span>{title}</span>
+                            </Link>
                             <br />
                             <small className={homeStyles.lightText}>
                                 {date}
